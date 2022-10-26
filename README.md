@@ -21,6 +21,4 @@ _Manutenção e limpeza do Linux_
 
 * Suporte a AUR helpers
 
- Download atualizar-v4.sh
-
 
