@@ -40,7 +40,7 @@ case "$ID $ID_LIKE" in
         fi
 
         # Checar se flatpak está instalado, se sim, atualizar
-        pacman -Q flatpak >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpack update -y; }
+        pacman -Q flatpak >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpak update -y; }
 
         # Checar se snapd está instalado, se sim, atualizar
         pacman -Q snapd >/dev/null 2>&1 && { printf "\n  %s- Atualizando snaps...%s\n\n" "$B" "$N"; snap refresh; }
@@ -60,7 +60,7 @@ case "$ID $ID_LIKE" in
         apt update -y; apt full-upgrade -y
 
         # Checar se flatpak está instalado, se sim, atualizar
-        dpkg -s flatpak >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpack update -y; }
+        dpkg -s flatpak >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpak update -y; }
 
         # Checar se snapd está instalado, se sim, atualizar
         dpkg -s snapd >/dev/null 2>&1 && { printf "\n  %s- Atualizando snaps...%s\n\n" "$B" "$N"; snap refresh; }
@@ -80,7 +80,7 @@ case "$ID $ID_LIKE" in
         zypper dup -y
 
         # Checar se flatpak está instalado, se sim, atualizar
-        zypper search --installed-only flatpak >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpack update -y; }
+        zypper search --installed-only flatpak >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpak update -y; }
 
         # Checar se snapd está instalado, se sim, atualizar
         zypper search --installed-only snapd >/dev/null 2>&1 && { printf "\n  %s- Atualizando snaps...%s\n\n" "$B" "$N"; snap refresh; }
@@ -100,7 +100,7 @@ case "$ID $ID_LIKE" in
         dnf distro-sync
 
         # Checar se flatpak está instalado, se sim, atualizar
-        dnf list installed flatpak >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpack update -y; }
+        dnf list installed flatpak >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpak update -y; }
 
         # Checar se snapd está instalado, se sim, atualizar
         dnf list installed snapd >/dev/null 2>&1 && { printf "\n  %s- Atualizando snaps...\n\n" "$B" "$N"; snap refresh; }
@@ -120,10 +120,10 @@ case "$ID $ID_LIKE" in
         emerge -auDN --keep-going @world
 
         # Checar se flatpak está instalado, se sim, atualizar
-        equery list flatpak >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpack update -y; }
+        equery list flatpak >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpak update -y; }
 
         # Checar se snapd está instalado, se sim, atualizar
-        equery list snapd >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpack update -y; }
+        equery list snapd >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpak update -y; }
 
         printf "\n%s* Atualizações concluídas!%s\n" "$B" "$N"
 
@@ -140,7 +140,7 @@ case "$ID $ID_LIKE" in
         apk -U upgrade
 
         # Checar se flatpak está instalado, se sim, atualizar
-        apk -e info flatpak >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpack update -y; }
+        apk -e info flatpak >/dev/null 2>&1 && { printf "\n  %s- Atualizando flatpaks...%s\n\n" "$B" "$N"; flatpak update -y; }
 
         # Não há snapd nos repositórios do Alpine.
 
